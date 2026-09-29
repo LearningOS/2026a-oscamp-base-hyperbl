@@ -260,14 +260,17 @@ pub fn handle_panic(value: i32, should_panic: bool) -> Result<i32, ()> {
     // TODO: Join and map the result appropriately
     let handle = thread::spawn(move || {
         if should_panic {
-            Err(())
+            panic!("oops")
         }
         else {
-            Ok(value)
+            value
         }
     });
     // todo!()
-    handle.join().unwrap()
+    match handle.join() {
+        Ok(value) => Ok(value),
+        _ => Err(())
+    }
 }
 
 #[cfg(test)]

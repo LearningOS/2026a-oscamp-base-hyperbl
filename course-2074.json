@@ -2,8 +2,8 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-hyperbl",
-  "commit": "c615510d7d1d6bf5e4070ab7a144174658b96c7a",
-  "score": 3,
+  "commit": "a1e5d12c5af2d2548cc76e7e4e069332b4051723",
+  "score": 11,
   "totalScore": 100,
   "exercises": [
     {
@@ -16,16 +16,16 @@
     {
       "name": "mutex_counter",
       "max": 4,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 4,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "channel",
       "max": 4,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 4,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "process_pipe",
@@ -176,9 +176,9 @@
     }
   ],
   "student": "hyperbl",
-  "runId": "36532727491",
+  "runId": "36563334520",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }

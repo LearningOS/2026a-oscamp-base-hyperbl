@@ -33,7 +33,7 @@
 
 use std::io::{self, Read, Write};
 use std::process::{Command, Stdio};
-use std::thread::spawn;
+// use std::thread::spawn;
 
 /// Execute the given shell command and return its stdout output.
 ///

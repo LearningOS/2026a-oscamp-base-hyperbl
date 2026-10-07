@@ -2,8 +2,8 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-hyperbl",
-  "commit": "48b26cf104df85744cbb7e18e64c5e9a0d126033",
-  "score": 15,
+  "commit": "52182313b8b7c7b32d3473d4f82d77312413ec12",
+  "score": 24,
   "totalScore": 100,
   "exercises": [
     {
@@ -37,16 +37,16 @@
     {
       "name": "mem_primitives",
       "max": 4,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 4,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "bump_allocator",
       "max": 5,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 5,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "free_list_allocator",
@@ -176,9 +176,9 @@
     }
   ],
   "student": "hyperbl",
-  "runId": "36572727925",
+  "runId": "37600291680",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }

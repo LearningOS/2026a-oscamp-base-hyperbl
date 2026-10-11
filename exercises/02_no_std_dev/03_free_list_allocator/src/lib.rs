@@ -139,20 +139,20 @@ unsafe impl GlobalAlloc for FreeListAllocator {
         }
         else {
             let mut next = self.bump_next.load(Ordering::SeqCst);
-            let aligned = (next + align - 1) & !(align - 1);
-            let end = aligned + size;
+            loop {
+                let aligned = (next + align - 1) & !(align - 1);
+                let Some(end) = aligned.checked_add(layout.size()) else {
+                    return null_mut();
+                };
 
-            if end > self.heap_end {
-                return null_mut();
-            }
-            else {
-                loop {
-                    match self.bump_next.compare_exchange(next, end, Ordering::SeqCst, Ordering::SeqCst) {
-                        Ok(_) => break,
-                        Err(actual) => next = actual,
-                    }
+                if end > self.heap_end {
+                    return null_mut();
                 }
-                return aligned as *mut u8;
+                
+                match self.bump_next.compare_exchange(next, end, Ordering::SeqCst, Ordering::SeqCst) {
+                    Ok(_) => return aligned as *mut u8,
+                    Err(actual) => next = actual,
+                }
             }
         }
     }

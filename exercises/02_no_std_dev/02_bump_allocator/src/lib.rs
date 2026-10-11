@@ -76,20 +76,21 @@ unsafe impl GlobalAlloc for BumpAllocator {
         // 6. Return the aligned address as a pointer
         let mut next = self.next.load(Ordering::SeqCst);
         let align = layout.align();
-        let aligned = (next + align - 1) & !(align - 1);
-        let end = aligned + layout.size();
 
-        if end > self.heap_end {
-            return null_mut();
-        }
-        else {
-            loop {
-                match self.next.compare_exchange(next, end, Ordering::SeqCst, Ordering::SeqCst) {
-                    Ok(_) => break,
-                    Err(actual) => next = actual,
-                }
+        loop {
+            let aligned = (next + align - 1) & !(align - 1);
+            let Some(end) = aligned.checked_add(layout.size()) else {
+                return null_mut();
+            };
+
+            if end > self.heap_end {
+                return null_mut();
             }
-            return aligned as *mut u8;
+            
+            match self.next.compare_exchange(next, end, Ordering::SeqCst, Ordering::SeqCst) {
+                Ok(_) => return aligned as *mut u8,
+                Err(actual) => next = actual,
+            }
         }
     }
 

@@ -2,8 +2,8 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-hyperbl",
-  "commit": "e6ccdd3039c2b3525d41e7f272c72f19ef9b0d8d",
-  "score": 39,
+  "commit": "f11f1e980a4d04084bebd9df5fc95f406f946a00",
+  "score": 60,
   "totalScore": 100,
   "exercises": [
     {
@@ -72,37 +72,37 @@
     {
       "name": "atomic_counter",
       "max": 4,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 4,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "atomic_ordering",
       "max": 4,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 4,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "spinlock",
       "max": 4,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 4,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "spinlock_guard",
       "max": 4,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 4,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "rwlock",
       "max": 5,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 5,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "stack_coroutine",
@@ -176,9 +176,9 @@
     }
   ],
   "student": "hyperbl",
-  "runId": "38249137003",
+  "runId": "38547012586",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }

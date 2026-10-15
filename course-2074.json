@@ -2,8 +2,8 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-hyperbl",
-  "commit": "c47ddf262be125db3e49972eda59c88f75d700ba",
-  "score": 97,
+  "commit": "3095e1320893bddaf2b6613ea9503882acd10b9b",
+  "score": 100,
   "totalScore": 100,
   "exercises": [
     {
@@ -170,15 +170,15 @@
     {
       "name": "tlb_sim",
       "max": 3,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 3,
+      "status": "pass",
+      "exitCode": 0
     }
   ],
   "student": "hyperbl",
-  "runId": "38678384259",
+  "runId": "38685140234",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
